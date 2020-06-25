@@ -1,4 +1,6 @@
 package objects;
 
-public class Object {
+import behaviours.IObject;
+
+public abstract class Object implements IObject {
 }

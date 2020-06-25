@@ -1,18 +1,18 @@
 package characters;
 
-import weapons.Weapon;
-import objects.Object;
+import behaviours.IWeapon;
+import objects.Food;
 import java.util.ArrayList;
 
 public abstract class Npc {
     String name;
-    Weapon weapon;
-    ArrayList<Object>  objects;
+    IWeapon IWeapon;
+    ArrayList<Food>  objects;
     int hitPoint;
 
-    public Npc(String name, Weapon weapon, ArrayList<Object> objects, int hitPoint) {
+    public Npc(String name, IWeapon IWeapon, ArrayList<Food> objects, int hitPoint) {
         this.name = name;
-        this.weapon = weapon;
+        this.IWeapon = IWeapon;
         this.objects = objects;
         this.hitPoint = hitPoint;
     }
@@ -21,11 +21,11 @@ public abstract class Npc {
         return name;
     }
 
-    public Weapon getWeapon() {
-        return weapon;
+    public IWeapon getIWeapon() {
+        return IWeapon;
     }
 
-    public ArrayList<Object> getObjects() {
+    public ArrayList<Food> getObjects() {
         return objects;
     }
 

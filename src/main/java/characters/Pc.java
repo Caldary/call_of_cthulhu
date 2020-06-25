@@ -1,19 +1,19 @@
 package characters;
 
-import weapons.Weapon;
+import behaviours.IWeapon;
 
 import java.util.ArrayList;
 
 public abstract class Pc {
     String name;
-    Weapon weapon;
+    IWeapon IWeapon;
     ArrayList<Object> objects;
     int hitPoint;
     int sanityLevel;
 
-    public Pc(String name, Weapon weapon, ArrayList<Object> objects, int hitPoint, int sanityLevel) {
+    public Pc(String name, IWeapon IWeapon, ArrayList<Object> objects, int hitPoint, int sanityLevel) {
         this.name = name;
-        this.weapon = weapon;
+        this.IWeapon = IWeapon;
         this.objects = objects;
         this.hitPoint = hitPoint;
         this.sanityLevel = sanityLevel;
@@ -27,12 +27,12 @@ public abstract class Pc {
         this.name = name;
     }
 
-    public Weapon getWeapon() {
-        return weapon;
+    public IWeapon getIWeapon() {
+        return IWeapon;
     }
 
-    public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
+    public void setIWeapon(IWeapon IWeapon) {
+        this.IWeapon = IWeapon;
     }
 
     public ArrayList<Object> getObjects() {
@@ -58,8 +58,5 @@ public abstract class Pc {
     public void setSanityLevel(int sanityLevel) {
         this.sanityLevel = sanityLevel;
     }
-
-
-
 
 }

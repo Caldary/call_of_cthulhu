@@ -1,12 +1,16 @@
 package weapons;
 
-public abstract class Weapon {
+import behaviours.IWeapon;
+
+public abstract class Weapon implements IWeapon {
     private String name;
     private int damage;
+    private String range;
 
-    public Weapon(String name, int damage){
+    public Weapon(String name, int damage, String range) {
         this.name = name;
         this.damage = damage;
+        this.range = range;
     }
 
     public String getName() {
@@ -17,11 +21,19 @@ public abstract class Weapon {
         this.name = name;
     }
 
-    public int getDamage() {
-        return damage;
-    }
-
     public void setDamage(int damage) {
         this.damage = damage;
+    }
+
+    public String getRange() {
+        return range;
+    }
+
+    public void setRange(String range) {
+        this.range = range;
+    }
+
+    public int getDamage() {
+        return this.damage;
     }
 }
