@@ -9,5 +9,12 @@ public class Stick extends Weapon{
         super(name, damage, range);
     }
 
+    public int poke() {
+        return 4 * getDamage();
+    }
+
+    public int Swing(){
+        return 2 * getDamage();
+    }
 
 }

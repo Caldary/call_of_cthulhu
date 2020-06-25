@@ -9,10 +9,12 @@ public class Gun extends Weapon {
         super(name, damage, range);
     }
 
+    public int shoot(){
+        return 10 * getDamage();
+    }
 
-
-    public int attack() {
-        return ;
+    public int meelee(){
+        return 4 * getDamage();
     }
 
 }

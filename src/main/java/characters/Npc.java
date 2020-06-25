@@ -1,19 +1,20 @@
 package characters;
 
+import behaviours.INonPlayer;
+import behaviours.IObject;
 import behaviours.IWeapon;
-import objects.Food;
 import java.util.ArrayList;
 
-public abstract class Npc {
+public abstract class Npc implements INonPlayer {
     String name;
-    IWeapon IWeapon;
-    ArrayList<Food>  objects;
+    IWeapon weapon;
+    ArrayList<IObject> inventory;
     int hitPoint;
 
-    public Npc(String name, IWeapon IWeapon, ArrayList<Food> objects, int hitPoint) {
+    public Npc(String name, IWeapon weapon, ArrayList<IObject> inventory, int hitPoint) {
         this.name = name;
-        this.IWeapon = IWeapon;
-        this.objects = objects;
+        this.weapon = weapon;
+        this.inventory = inventory;
         this.hitPoint = hitPoint;
     }
 
@@ -21,12 +22,12 @@ public abstract class Npc {
         return name;
     }
 
-    public IWeapon getIWeapon() {
-        return IWeapon;
+    public IWeapon getWeapon() {
+        return weapon;
     }
 
-    public ArrayList<Food> getObjects() {
-        return objects;
+    public ArrayList<IObject> getInventory() {
+        return inventory;
     }
 
     public int getHitPoint() {

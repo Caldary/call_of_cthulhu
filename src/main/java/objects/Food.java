@@ -1,6 +1,6 @@
-package objects;
-
-import behaviours.IObject;
-
-public class Food implements IObject {
-}
+//package objects;
+//
+//import behaviours.IObject;
+//
+//public class Food implements IObject {
+//}

@@ -2,7 +2,7 @@ package dungeon;
 
 import java.util.ArrayList;
 
-public abstract class Dungeon {
+public class Dungeon {
     String name;
     ArrayList<Room> rooms;
     boolean doorIsOpen;

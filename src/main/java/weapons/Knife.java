@@ -9,6 +9,12 @@ public class Knife extends Weapon {
         super(name, damage, range);
     }
 
+    public int stab() {
+        return 5 * getDamage();
+    }
 
+    public int slash(){
+        return 4 * getDamage();
+    }
 
 }

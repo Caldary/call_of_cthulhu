@@ -1,46 +1,38 @@
 package characters;
 
+import behaviours.IPlayer;
+import behaviours.IObject;
 import behaviours.IWeapon;
 
 import java.util.ArrayList;
 
-public abstract class Pc {
+public abstract class Pc implements IPlayer {
     String name;
-    IWeapon IWeapon;
-    ArrayList<Object> objects;
+    IWeapon weapon;
+    ArrayList<IObject> inventory;
     int hitPoint;
-    int sanityLevel;
 
-    public Pc(String name, IWeapon IWeapon, ArrayList<Object> objects, int hitPoint, int sanityLevel) {
+    public Pc(String name, IWeapon weapon, ArrayList<IObject> inventory, int hitPoint) {
         this.name = name;
-        this.IWeapon = IWeapon;
-        this.objects = objects;
+        this.weapon = weapon;
+        this.inventory = inventory;
         this.hitPoint = hitPoint;
-        this.sanityLevel = sanityLevel;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public IWeapon getWeapon() {
+        return weapon;
     }
 
-    public IWeapon getIWeapon() {
-        return IWeapon;
+    public ArrayList<IObject> getInventory() {
+        return inventory;
     }
 
-    public void setIWeapon(IWeapon IWeapon) {
-        this.IWeapon = IWeapon;
-    }
-
-    public ArrayList<Object> getObjects() {
-        return objects;
-    }
-
-    public void setObjects(ArrayList<Object> objects) {
-        this.objects = objects;
+    public void addObject(IObject object){
+        this.inventory.add(object);
     }
 
     public int getHitPoint() {
@@ -49,14 +41,6 @@ public abstract class Pc {
 
     public void setHitPoint(int hitPoint) {
         this.hitPoint = hitPoint;
-    }
-
-    public int getSanityLevel() {
-        return sanityLevel;
-    }
-
-    public void setSanityLevel(int sanityLevel) {
-        this.sanityLevel = sanityLevel;
     }
 
 }
